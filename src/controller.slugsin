@@ -1,0 +1,42 @@
+[INPUT]
+goal_reached        
+human_nearby        
+
+[OUTPUT]
+initial             
+positioning         
+cutting
+end
+
+[ENV_INIT]
+!goal_reached
+!human_nearby
+
+[SYS_INIT]
+initial
+!positioning
+!cutting
+!end
+
+[ENV_TRANS]
+goal_reached -> goal_reached' & !human_nearby'
+goal_reached -> !human_nearby
+!human_nearby | human_nearby
+
+[SYS_TRANS]
+initial -> positioning' & !initial' & !cutting' & !end'
+positioning & !human_nearby & !goal_reached -> cutting' & !positioning' & !initial' & !end'
+cutting & !human_nearby & !goal_reached -> positioning' & !cutting' & !initial' & !end'
+goal_reached -> end' & !positioning' & !cutting' & !initial'
+end -> end'
+human_nearby -> (positioning -> positioning') & (cutting -> cutting')
+!human_nearby & !goal_reached -> (positioning' | cutting')
+
+[ENV_LIVENESS]
+goal_reached
+human_nearby
+
+[SYS_LIVENESS]
+end
+positioning
+cutting

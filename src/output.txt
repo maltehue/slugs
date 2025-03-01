@@ -1,0 +1,242 @@
+# This file is a BDD exported by the SLUGS
+#
+# This BDD is a strategy.
+#
+# This header contains extra information used by LTLMoP's BDDStrategy.
+# Currently, the only metadata is 1) the total number of system goals
+# and 2) the mapping between variable numbers and proposition names.
+#
+# Some special variables are also added:
+#       - `_jx_b*` are used as a binary vector (b0 is LSB) to indicate
+#         the index of the currently-pursued goal.
+#       - `strat_type` is a binary variable used to indicate whether we are
+#          moving closer to the current goal (0) or transitioning to the next goal (1)
+#
+# Num goals: 3
+# Variable names:
+#	0: goal_reached
+#	1: goal_reached'
+#	2: human_nearby
+#	3: human_nearby'
+#	4: initial
+#	5: initial'
+#	6: positioning
+#	7: positioning'
+#	8: cutting
+#	9: cutting'
+#	10: end
+#	11: end'
+#	12: _jx_b0
+#	13: _jx_b1
+#	14: strat_type
+#
+# For information about the DDDMP format, please see:
+#    http://www.cs.uleth.ca/~rice/cudd_docs/dddmp/dddmpAllFile.html#dddmpDump.c
+#
+# For information about how this file is generated, please see the SLUGS source.
+#
+.ver DDDMP-2.0
+.mode A
+.varinfo 0
+.nnodes 190
+.nvars 15
+.nsuppvars 15
+.suppvarnames goal_reached goal_reached' human_nearby human_nearby' initial initial' positioning positioning' cutting cutting' end end' _jx_b0 _jx_b1 strat_type
+.orderedvarnames goal_reached goal_reached' human_nearby human_nearby' initial initial' positioning positioning' cutting cutting' end end' _jx_b0 _jx_b1 strat_type
+.ids 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+.permids 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+.auxids 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+.nroots 1
+.rootids -190
+.nodes
+1 T 1 0 0
+2 14 14 1 -1
+3 13 13 1 2
+4 13 13 2 -1
+5 12 12 3 4
+6 11 11 5 1
+7 12 12 3 2
+8 11 11 7 1
+9 10 10 6 8
+10 9 9 1 9
+11 8 8 1 10
+12 7 7 1 11
+13 6 6 1 12
+14 5 5 1 13
+15 4 4 1 14
+16 13 13 1 -1
+17 12 12 16 -1
+18 11 11 17 1
+19 13 13 1 -2
+20 12 12 16 -19
+21 11 11 20 1
+22 10 10 18 21
+23 9 9 1 22
+24 12 12 16 4
+25 11 11 24 1
+26 12 12 16 2
+27 11 11 26 1
+28 10 10 25 27
+29 9 9 1 28
+30 8 8 23 29
+31 7 7 1 30
+32 12 12 3 -1
+33 11 11 32 1
+34 12 12 3 -19
+35 11 11 34 1
+36 10 10 33 35
+37 9 9 1 36
+38 8 8 37 10
+39 7 7 1 38
+40 6 6 31 39
+41 5 5 1 40
+42 4 4 1 41
+43 2 2 15 42
+44 1 1 43 1
+45 11 11 1 26
+46 10 10 1 45
+47 9 9 1 46
+48 8 8 1 47
+49 7 7 48 1
+50 11 11 1 7
+51 10 10 1 50
+52 9 9 1 51
+53 8 8 1 52
+54 7 7 53 1
+55 6 6 49 54
+56 5 5 1 55
+57 10 10 18 20
+58 9 9 57 1
+59 10 10 25 26
+60 8 8 58 59
+61 7 7 60 1
+62 10 10 33 34
+63 9 9 62 1
+64 10 10 6 7
+65 8 8 63 64
+66 6 6 61 65
+67 4 4 56 66
+68 12 12 16 -16
+69 11 11 20 68
+70 10 10 18 69
+71 9 9 70 1
+72 13 13 2 1
+73 12 12 16 72
+74 11 11 26 73
+75 10 10 25 74
+76 11 11 16 1
+77 12 12 16 3
+78 12 12 16 1
+79 11 11 77 78
+80 10 10 76 79
+81 9 9 75 80
+82 8 8 71 81
+83 7 7 82 1
+84 12 12 3 -16
+85 11 11 34 84
+86 10 10 33 85
+87 9 9 86 1
+88 12 12 3 72
+89 11 11 7 88
+90 10 10 6 89
+91 12 12 3 16
+92 11 11 91 1
+93 12 12 3 1
+94 11 11 3 93
+95 10 10 92 94
+96 9 9 90 95
+97 8 8 87 96
+98 12 12 1 -1
+99 11 11 98 1
+100 12 12 1 -19
+101 12 12 1 -16
+102 11 11 100 101
+103 10 10 99 102
+104 9 9 103 1
+105 12 12 1 4
+106 11 11 105 1
+107 12 12 1 2
+108 12 12 1 72
+109 11 11 107 108
+110 10 10 106 109
+111 12 12 1 16
+112 11 11 111 1
+113 12 12 1 3
+114 11 11 113 1
+115 10 10 112 114
+116 9 9 110 115
+117 8 8 104 116
+118 7 7 97 117
+119 6 6 83 118
+120 5 5 1 119
+121 4 4 56 120
+122 3 3 67 121
+123 11 11 1 34
+124 10 10 1 123
+125 9 9 1 124
+126 8 8 125 52
+127 7 7 126 1
+128 6 6 1 127
+129 5 5 1 128
+130 8 8 1 64
+131 9 9 64 1
+132 8 8 1 131
+133 7 7 130 132
+134 6 6 1 133
+135 9 9 46 1
+136 8 8 1 135
+137 7 7 1 136
+138 8 8 125 64
+139 7 7 138 132
+140 6 6 137 139
+141 5 5 134 140
+142 4 4 129 141
+143 8 8 125 96
+144 9 9 110 1
+145 8 8 1 144
+146 7 7 143 145
+147 6 6 137 146
+148 5 5 1 147
+149 4 4 129 148
+150 3 3 142 149
+151 2 2 122 150
+152 11 11 1 77
+153 10 10 1 152
+154 9 9 1 153
+155 8 8 1 154
+156 7 7 155 1
+157 11 11 1 3
+158 10 10 1 157
+159 9 9 1 158
+160 8 8 1 159
+161 6 6 156 160
+162 9 9 124 1
+163 8 8 162 51
+164 7 7 53 163
+165 6 6 49 164
+166 5 5 161 165
+167 4 4 56 166
+168 9 9 51 158
+169 8 8 162 168
+170 7 7 1 169
+171 6 6 1 170
+172 5 5 171 165
+173 4 4 56 172
+174 3 3 167 173
+175 7 7 160 1
+176 6 6 1 175
+177 9 9 51 1
+178 8 8 1 177
+179 7 7 126 178
+180 6 6 137 179
+181 5 5 176 180
+182 4 4 129 181
+183 7 7 1 178
+184 6 6 1 183
+185 5 5 184 180
+186 4 4 129 185
+187 3 3 182 186
+188 2 2 174 187
+189 1 1 151 188
+190 0 0 44 189
+.end

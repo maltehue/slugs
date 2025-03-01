@@ -1,0 +1,65 @@
+[INPUT]
+goal_reached
+human_nearby
+
+
+
+[OUTPUT]
+initial
+positioning
+paused
+cutting
+end
+
+
+[ENV_TRANS]
+| ! goal_reached & goal_reached' ! human_nearby'
+| ! goal_reached ! human_nearby
+| ! human_nearby human_nearby
+| ! human_nearby ! goal_reached'
+
+
+[ENV_INIT]
+! goal_reached
+! human_nearby
+
+
+[SYS_TRANS]
+| ! initial & & ! positioning ! cutting ! end
+| ! positioning & & ! initial ! cutting ! end
+| ! cutting & & ! initial ! positioning ! end
+| ! end & & ! initial ! positioning ! cutting
+
+| ! & & initial ! goal_reached ! human_nearby positioning'
+| ! & & positioning ! goal_reached ! human_nearby cutting'
+| ! & & cutting ! goal_reached ! human_nearby positioning'
+
+| ! goal_reached end'
+| ! human_nearby paused'
+
+| ! & human_nearby positioning positioning'
+| ! & human_nearby cutting cutting'
+
+| ! end end'
+
+
+[SYS_INIT]
+initial
+! positioning
+! cutting
+! end
+! paused
+
+
+[ENV_LIVENESS]
+goal_reached
+human_nearby
+
+
+[SYS_LIVENESS]
+positioning
+cutting
+
+# Das Problem ist eine rihtige spezifikation zu definieren die in der simulation genau das tut was ich erwarte
+# Die arbeit, die dafuer aufgewendet wird kann auch bneutzt werden um giskard wrapper functions in der richtigen reihenfolge aufzurufen
+

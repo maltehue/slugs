@@ -49,8 +49,9 @@ print("node [shape=tab] \""+",".join(propositions)+"\";")
 for (state,(rank,values)) in states.items():
   print("\""+state+"\" [shape=box,label=\""+"".join(values)+"/"+rank+"\"];")
 for state in states:
+  if not state in transitions.keys():
+    continue
   for b in transitions[state]:
     print("\""+state+"\" -> \""+str(b)+"\";")    
 print("}")
   
-

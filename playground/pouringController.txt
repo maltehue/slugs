@@ -1,0 +1,23 @@
+[INPUT]
+#sensors inputs
+goal_reached
+human_nearby
+
+
+[OUTPUT]
+# movement primitives or skills
+
+[ENV_INIT]
+# expectations on the env
+
+
+[SYS_INIT]
+
+[ENV_TRANS]
+
+[SYS_TRANS]
+
+[ENV_LIVENESS]
+
+[SYS_LIVENESS]
+

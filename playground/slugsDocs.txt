@@ -1,0 +1,5 @@
+./../slugs/src/slugs --explicitStrategy controller2.slug | python3 ../slugs/tools/explicitStrategyToGraphviz.py
+
+python3 ../slugs/tools/StructuredSlugsParser/compiler.py controller2.txt > controller2.slug
+
+./../slugs/src/slugs --explicitStrategy controller2.slug

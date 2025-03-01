@@ -1,0 +1,38 @@
+State 0 with rank 0 -> <goal_reached:0, human_nearby:0, initial:1, positioning:0, positioningPaused:0, cutting:0, end:0>
+	With successors : 2, 3, 4, 5
+State 1 with rank 0 -> <goal_reached:0, human_nearby:0, initial:1, positioning:0, positioningPaused:1, cutting:0, end:0>
+	With successors : 2, 3, 4, 5
+State 2 with rank 0 -> <goal_reached:0, human_nearby:0, initial:0, positioning:1, positioningPaused:0, cutting:0, end:0>
+	With successors : 6, 7, 8, 9
+State 3 with rank 0 -> <goal_reached:0, human_nearby:1, initial:0, positioning:1, positioningPaused:0, cutting:0, end:0>
+	With successors : 10, 11, 12, 13
+State 4 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:1, positioningPaused:0, cutting:0, end:0>
+	With successors : 14
+State 5 with rank 0 -> <goal_reached:1, human_nearby:1, initial:0, positioning:1, positioningPaused:0, cutting:0, end:0>
+	With successors : 
+State 6 with rank 0 -> <goal_reached:0, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:1, end:0>
+	With successors : 2, 3, 4, 5
+State 7 with rank 0 -> <goal_reached:0, human_nearby:1, initial:0, positioning:0, positioningPaused:0, cutting:1, end:0>
+	With successors : 6, 7, 15, 9
+State 8 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:1, end:0>
+	With successors : 14
+State 9 with rank 0 -> <goal_reached:1, human_nearby:1, initial:0, positioning:0, positioningPaused:0, cutting:1, end:0>
+	With successors : 
+State 10 with rank 0 -> <goal_reached:0, human_nearby:0, initial:0, positioning:0, positioningPaused:1, cutting:0, end:0>
+	With successors : 2, 3, 16, 5
+State 11 with rank 0 -> <goal_reached:0, human_nearby:1, initial:0, positioning:0, positioningPaused:1, cutting:0, end:0>
+	With successors : 10, 11, 12, 13
+State 12 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:1, cutting:0, end:1>
+	With successors : 17
+State 13 with rank 0 -> <goal_reached:1, human_nearby:1, initial:0, positioning:0, positioningPaused:1, cutting:0, end:0>
+	With successors : 
+State 14 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:0, end:1>
+	With successors : 17
+State 15 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:1, end:1>
+	With successors : 17
+State 16 with rank 0 -> <goal_reached:1, human_nearby:0, initial:0, positioning:1, positioningPaused:0, cutting:0, end:1>
+	With successors : 18
+State 17 with rank 1 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:0, end:1>
+	With successors : 17
+State 18 with rank 2 -> <goal_reached:1, human_nearby:0, initial:0, positioning:0, positioningPaused:0, cutting:0, end:1>
+	With successors : 18
